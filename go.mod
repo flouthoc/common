@@ -49,3 +49,7 @@ retract (
 	v1.0.1 // This version is used only to publish retraction of v1.0.1.
 	v1.0.0 // We reverted to v0.… version numbers; the v1.0.0 tag was actually deleted.
 )
+
+replace github.com/containers/storage => github.com/flouthoc/storage v1.37.1-0.20220225084004-0257e80af9c7
+
+replace github.com/containers/image/v5 => github.com/flouthoc/image v1.5.2-0.20220224183920-955768c2aad0
