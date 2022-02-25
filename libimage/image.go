@@ -527,7 +527,7 @@ func (i *Image) Tag(name string) error {
 	}
 
 	newNames := append(i.Names(), ref.String())
-	if err := i.runtime.store.SetNames(i.ID(), newNames); err != nil {
+	if err := i.runtime.store.AddNames(i.ID(), newNames); err != nil {
 		return err
 	}
 
