@@ -1175,7 +1175,7 @@ func Path() string {
 	if path := os.Getenv("CONTAINERS_CONF"); path != "" {
 		return path
 	}
-	if unshare.IsRootless() {
+	if unshare.GetRootlessUID() > 0 {
 		if rpath, err := rootlessConfigPath(); err == nil {
 			return rpath
 		}
